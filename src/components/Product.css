@@ -1,0 +1,65 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+  
+  .course-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of cards on smaller screens */
+    justify-content: space-between; /* Adds space between the cards */
+    padding: 20px;
+  }
+  
+  .course-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(25% - 40px); /* Responsive width, adjusting to screen size */
+    max-width: calc(25% - 40px); /* Max width to fit 4 cards per row */
+    min-width: 250px; /* Ensures minimum size */
+  }
+  
+  .course-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .course-card p {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .course-title {
+    font-weight: bold;
+    align-items: center;
+    font-size: 30px;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .course-card {
+      flex: 1 1 calc(50% - 40px); /* Fit 2 cards per row on medium screens */
+      max-width: calc(50% - 40px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .course-card {
+      flex: 1 1 100%; /* Full-width for small screens */
+      max-width: 100%;
+    }
+  }
+  

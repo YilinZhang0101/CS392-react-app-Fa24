@@ -1,6 +1,6 @@
 import Banner from './components/Banner.jsx';
 import CourseList from './components/CourseList.jsx';
-// import './App.css';
+import './App.css';
 
 const schedule = {
   "title": "CS Courses for 2018-2019",
@@ -34,7 +34,7 @@ const schedule = {
 
 const App = () => {
   return (   // specifies what the app component should display
-    <div>
+    <div className="App-header">
       {/* <h1>{schedule.title}</h1> */}
       <Banner title={schedule.title} />
       <CourseList courses={schedule.courses} />
